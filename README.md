@@ -8,13 +8,15 @@ Module Inputs:
 -	password: vRealize Orchestrator password 
 -	workflow_id: Id of the workflow to run. Must be copy form vRO.
 -   input_values: All workflow input values in YAML object format:
+```
         Ansible:
-        Input1_name: value
-        Input2_name: value
-        Input3_name:
-        - Array_value1
-        - Array_value2
-        - Array_value3
+                Input1_name: value
+                Input2_name: value
+                Input3_name:
+                - Array_value1
+                - Array_value2
+                - Array_value3
+```
 Inputs must much vRO workflow inputs
 
 For Annsible --check flag functionality to work a test input in vRO workflow is mandatory but is hidden from ansible perspective and must be omitted in input_valuse section of the playbook. 
