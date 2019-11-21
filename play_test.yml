@@ -1,0 +1,17 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: Run Test vRO Workflow
+      run_vro_wf:
+        vro_server: "https://vro.lab.local:8281"
+        username: "vcoadmin@vsphere.local"
+        password: "XXXXXXXX"
+        workflow_id: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+          vCenter: https://services-vcsa.vro.lab.local:443/sdk
+          clusterName: LAB01
+      register: result
+
+    - name: output result
+      debug: 
+        msg: " {{ result }} "
